@@ -1,7 +1,12 @@
 name: Docker Image CI
 
 on:
-  workflow_call
+  workflow_dispatch:
+    inputs:
+      tag:
+        type: string
+        description: The tag to use for the Docker image
+        default: latest
   push:
     tags: [ 'v*.*.*' ]
 
