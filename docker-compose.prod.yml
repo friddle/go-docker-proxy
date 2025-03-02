@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  proxy:
+    image: ghcr.io/你的用户名/项目名:latest
+    environment:
+      - CUSTOM_DOMAIN=your-domain.com
+      - MODE=production
+    restart: always
+    network_mode: host
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
