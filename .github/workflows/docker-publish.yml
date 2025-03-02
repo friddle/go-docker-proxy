@@ -14,7 +14,7 @@ on:
 
 env:
   REGISTRY: ghcr.io/friddle
-  IMAGE_NAME: docker-proxy
+  IMAGE_NAME: go-docker-proxy
 
 jobs:
   build:
@@ -30,7 +30,6 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.21'
-        
         
     - name: Log in to the Container registry
       uses: docker/login-action@v3
