@@ -2,10 +2,11 @@ version: '3'
 
 services:
   proxy:
-    image: ghcr.io/你的用户名/项目名:latest
+    image: ghcr.io/friddle/go-docker-proxy:master
     environment:
       - CUSTOM_DOMAIN=your-domain.com
       - MODE=production
+      - PORT=5000
     restart: always
     network_mode: host
     logging:
